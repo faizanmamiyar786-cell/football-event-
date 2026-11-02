@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Ultimate Football Cup 2026 — one game, one dream, one champion.">
+<title>Ultimate Football Cup 2026</title>
+<style>
+:root{--bg:#090d0b;--panel:#111a15;--green:#39e078;--green2:#159447;--white:#f5f8f5;--muted:#aab7ad;--line:#26372c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--white);line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,12,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;letter-spacing:1px;font-size:1.05rem}.logo span{color:var(--green)}
+.nav-links{display:flex;gap:22px;align-items:center;font-size:.9rem;color:#dce5de}
+.nav-links a:hover{color:var(--green)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 11px}
+.btn{display:inline-block;border:0;border-radius:7px;padding:13px 20px;font-weight:800;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--green);color:#07110a}.btn-primary:hover{background:#6df39d;transform:translateY(-2px)}
+.btn-outline{border:1px solid #6b8874;color:white;background:transparent}.btn-outline:hover{border-color:var(--green);color:var(--green)}
+.hero{min-height:660px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(3,9,5,.96) 0%,rgba(3,9,5,.78) 48%,rgba(3,9,5,.25) 100%),url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,var(--bg))}
+.hero-content{position:relative;z-index:1;max-width:700px;padding:85px 0}
+.eyebrow{color:var(--green);font-size:.8rem;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(3rem,8vw,6.2rem);line-height:.98;letter-spacing:-3px;margin:18px 0}
+h1 span{color:var(--green)}
+.hero p{font-size:1.1rem;color:#d0d9d2;max-width:560px;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.countdown{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap}
+.timebox{background:rgba(8,18,11,.75);border:1px solid #42614b;padding:12px 18px;border-radius:9px;min-width:82px;text-align:center}
+.timebox strong{display:block;font-size:1.6rem;color:var(--green);line-height:1.2}.timebox small{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:1px}
+section{padding:82px 0;scroll-margin-top:75px}
+.section-head{max-width:680px;margin-bottom:35px}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:9px 0 12px}
+.section-head p,.muted{color:var(--muted)}
+.grid{display:grid;gap:18px}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:23px}
+.card h3{margin:8px 0}.card p{color:var(--muted);font-size:.94rem}
+.icon{font-size:1.7rem}
+.about-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.about-image{min-height:390px;border-radius:15px;background:linear-gradient(0deg,rgba(0,0,0,.15),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1100&q=85') center/cover}
+.detail-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
+.detail{background:var(--panel);padding:15px;border:1px solid var(--line);border-radius:9px}
+.detail small{display:block;color:var(--muted)}.detail strong{color:var(--green)}
+.audience{display:flex;gap:15px;align-items:flex-start}.audience .icon{min-width:35px}
+.steps{counter-reset:step}.step{position:relative;padding-left:58px;min-height:68px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:#163b25;color:var(--green);display:grid;place-items:center;font-weight:900}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:580px;background:var(--panel)}
+th,td{text-align:left;padding:15px 17px;border-bottom:1px solid var(--line)}
+th{color:var(--green);font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+td{color:#e0e8e1}tr:last-child td{border-bottom:0}
+.tag{display:inline-block;padding:4px 9px;border-radius:30px;background:#173b25;color:var(--green);font-size:.75rem;font-weight:800}
+.form-card{max-width:760px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.86rem;color:#dce5de;margin-bottom:6px}
+input,select,textarea{width:100%;background:#0a110d;color:white;border:1px solid #34483a;border-radius:7px;padding:12px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--green)}
+.full{grid-column:1/-1}
+.notice{color:var(--muted);font-size:.82rem;margin-top:12px}
+#formMessage{margin-top:15px;color:var(--green);font-weight:700}
+.gallery-item{height:190px;border-radius:12px;background-size:cover;background-position:center;border:1px solid var(--line)}
+.gallery-item:nth-child(1){background-image:url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80')}
+.gallery-item:nth-child(2){background-image:url('https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=800&q=80')}
+.gallery-item:nth-child(3){background-image:url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80')}
+.gallery-item:nth-child(4){background-image:url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80')}
+.sponsor{min-height:95px;display:grid;place-items:center;color:#c3d0c6;font-weight:900;letter-spacing:2px;font-size:1.05rem}
+.contact-box{background:linear-gradient(120deg,#12351f,#0d1b12);border:1px solid #285638;border-radius:15px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:850px){.nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:#09100b;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.menu-btn{display:block}.nav .nav-cta{display:none}.grid-4{grid-template-columns:repeat(2,1fr)}.about-layout{grid-template-columns:1fr}.about-image{min-height:280px}}
+@media(max-width:560px){section{padding:60px 0}.hero{min-height:620px}.hero-content{padding:65px 0}h1{letter-spacing:-1.5px}.grid-3,.grid-2,.grid-4,.form-grid,.detail-list{grid-template-columns:1fr}.full{grid-column:auto}.contact-box{align-items:flex-start;flex-direction:column}.timebox{min-width:65px;padding:10px 12px}.timebox strong{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">ULTIMATE <span>CUP</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#event">Event Details</a><a href="#format">Format</a>
+      <a href="#schedule">Schedule</a><a href="#register">Register</a><a href="#sponsors">Sponsors</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#register">Register Team</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">The ultimate football experience · 2026</div>
+    <h1>PLAY WITH<br><span>PASSION.</span><br>WIN WITH PRIDE.</h1>
+    <p>One Game. One Dream. One Champion. Bring your team, show your skills and be part of an unforgettable football tournament.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#register">Register Your Team →</a><a class="btn btn-outline" href="#about">Explore Event</a></div>
+    <div class="countdown" aria-label="Countdown to event">
+      <div class="timebox"><strong id="days">--</strong><small>Days</small></div>
+      <div class="timebox"><strong id="hours">--</strong><small>Hours</small></div>
+      <div class="timebox"><strong id="minutes">--</strong><small>Minutes</small></div>
+      <div class="timebox"><strong id="seconds">--</strong><small>Seconds</small></div>
+    </div>
+    <p class="notice">Event date is a placeholder. Update it in the JavaScript before publishing.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-layout">
+    <div>
+      <div class="eyebrow">About the tournament</div>
+      <div class="section-head"><h2>MORE THAN A GAME.</h2><p>The Ultimate Football Cup brings together college teams, amateur players and football fans for a celebration of competition, teamwork and sporting spirit.</p></div>
+      <p class="muted">Our goal is to create a platform for emerging talent, encourage an active lifestyle and deliver an exciting experience for players and spectators alike.</p>
+      <div style="margin-top:25px"><a class="btn btn-primary" href="#event">Discover the event</a></div>
+    </div>
+    <div class="about-image" role="img" aria-label="Football players on the pitch"></div>
+  </div>
+</section>
+
+<section id="event" style="background:#0c120e">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Mark your calendar</div><h2>EVENT DETAILS</h2><p>Everything you need to know before stepping onto the pitch.</p></div>
+    <div class="grid grid-4">
+      <div class="card"><div class="icon">📅</div><h3>Event Date</h3><p>To be announced</p></div>
+      <div class="card"><div class="icon">📍</div><h3>Venue</h3><p>Sports ground — location to be announced</p></div>
+      <div class="card"><div class="icon">⚽</div><h3>Format</h3><p>5-a-side or 7-a-side football</p></div>
+      <div class="card"><div class="icon">🏆</div><h3>Participation</h3><p>16 teams · 7–10 players per team</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="audience">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Who can be part of it?</div><h2>OUR TARGET AUDIENCE</h2><p>A tournament built for players, fans and the wider sporting community.</p></div>
+    <div class="grid grid-2">
+      <div class="card audience"><div class="icon">🎓</div><div><h3>College Students</h3><p>Students looking to represent their college, compete and support their teams.</p></div></div>
+      <div class="card audience"><div class="icon">🥅</div><div><h3>Amateur Football Players</h3><p>Local players who want to test their skills and gain match experience.</p></div></div>
+      <div class="card audience"><div class="icon">📣</div><div><h3>Football Fans</h3><p>Spectators who enjoy live football, team spirit and match-day excitement.</p></div></div>
+      <div class="card audience"><div class="icon">🤝</div><div><h3>Sports Clubs & Brands</h3><p>Clubs and sponsors interested in supporting grassroots sport and young talent.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="format" style="background:#0c120e">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">The road to the trophy</div><h2>TOURNAMENT FORMAT</h2><p>A clear competition journey from registration to the final whistle.</p></div>
+    <div class="grid grid-3">
+      <div class="card step"><h3>Team Registration</h3><p>Teams submit their details and confirm their place in the tournament.</p></div>
+      <div class="card step"><h3>Knockout Rounds</h3><p>Teams compete in qualifying matches to progress through the bracket.</p></div>
+      <div class="card step"><h3>Quarter-finals</h3><p>The remaining teams battle for a place in the final four.</p></div>
+      <div class="card step"><h3>Semi-finals</h3><p>Four teams compete for a place in the championship match.</p></div>
+      <div class="card step"><h3>Grand Finale</h3><p>The finalists compete for the Ultimate Football Cup trophy.</p></div>
+      <div class="card step"><h3>Prize Ceremony</h3><p>Celebrate the champions and recognise outstanding performances.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Don't miss a moment</div><h2>MATCH SCHEDULE</h2><p>Sample fixtures for demonstration. Official teams, dates and timings will be announced by the organisers.</p></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Round</th><th>Match</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Qualifier</td><td>Team Alpha vs Team Bravo</td><td>To be announced</td><td>To be announced</td><td><span class="tag">Upcoming</span></td></tr>
+        <tr><td>Qualifier</td><td>Team United vs City FC</td><td>To be announced</td><td>To be announced</td><td><span class="tag">Upcoming</span></td></tr>
+        <tr><td>Semi-final</td><td>Winner QF 1 vs Winner QF 2</td><td>To be announced</td><td>To be announced</td><td><span class="tag">Pending</span></td></tr>
+        <tr><td>Grand Final</td><td>Finalists TBA</td><td>To be announced</td><td>To be announced</td><td><span class="tag">Pending</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="notice">The schedule above is illustrative and is not a confirmed fixture list.</p>
+  </div>
+</section>
+
+<section id="leaderboard" style="background:#0c120e">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">The race for glory</div><h2>SCOREBOARD & LEADERBOARD</h2><p>Follow team standings and individual achievements during the tournament.</p></div>
+    <div class="grid grid-2">
+      <div class="card"><h3>🏅 Team Standings</h3><p>Points table will be updated by the event organisers after matches.</p><div style="margin-top:17px" class="table-wrap"><table><thead><tr><th>Team</th><th>Played</th><th>Points</th></tr></thead><tbody><tr><td>Team Alpha</td><td>0</td><td>0</td></tr><tr><td>Team Bravo</td><td>0</td><td>0</td></tr><tr><td>City FC</td><td>0</td><td>0</td></tr></tbody></table></div></div>
+      <div class="card"><h3>⚽ Player Awards</h3><div class="detail-list"><div class="detail"><small>Top Scorer</small><strong>To be announced</strong></div><div class="detail"><small>Best Goalkeeper</small><strong>To be announced</strong></div><div class="detail"><small>Player of the Match</small><strong>To be announced</strong></div><div class="detail"><small>Player of Tournament</small><strong>To be announced</strong></div></div></div>
+    </div>
+    <p class="notice">No live match data is connected. Scores and standings are placeholders until updated by the organisers.</p>
+  </div>
+</section>
+
+<section id="prizes">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Recognition & rewards</div><h2>PRIZES AND AWARDS</h2><p>Celebrating team success and individual excellence.</p></div>
+    <div class="grid grid-4">
+      <div class="card"><div class="icon">🏆</div><h3>Champion</h3><p>Winner's trophy and champion recognition.</p></div>
+      <div class="card"><div class="icon">🥈</div><h3>Runner-up</h3><p>Runner-up trophy and finalist recognition.</p></div>
+      <div class="card"><div class="icon">👟</div><h3>Golden Boot</h3><p>Award for the tournament's top goal scorer.</p></div>
+      <div class="card"><div class="icon">🧤</div><h3>Best Goalkeeper</h3><p>Recognition for outstanding goalkeeping.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="register" style="background:#0c120e">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Your moment starts here</div><h2>REGISTER YOUR TEAM</h2><p>Submit your team's details to express interest in participating.</p></div>
+    <form class="form-card" id="registrationForm">
+      <div class="form-grid">
+        <div><label for="team">Team Name *</label><input id="team" name="team" required placeholder="Enter team name"></div>
+        <div><label for="captain">Captain Name *</label><input id="captain" name="captain" required placeholder="Enter captain's name"></div>
+        <div><label for="phone">Contact Number *</label><input id="phone" name="phone" type="tel" required pattern="[0-9+() -]{8,18}" placeholder="Enter phone number"></div>
+        <div><label for="email">Email Address *</label><input id="email" name="email" type="email" required placeholder="name@example.com"></div>
+        <div><label for="club">College / Club</label><input id="club" name="club" placeholder="College or club name"></div>
+        <div><label for="players">Number of Players *</label><select id="players" name="players" required><option value="">Select players</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+        <div class="full"><label for="message">Additional Information</label><textarea id="message" name="message" rows="3" placeholder="Tell us anything the organisers should know"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Submit Registration Interest →</button></div>
+      </div>
+      <p class="notice">Demo form only: details are not sent to a server or stored. Connect a secure backend or form service before accepting real registrations.</p>
+      <div id="formMessage" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Feel the atmosphere</div><h2>FOOTBALL MOMENTS</h2><p>A glimpse of the energy, teamwork and excitement of the beautiful game.</p></div>
+    <div class="grid grid-4"><div class="gallery-item" aria-label="Football match"></div><div class="gallery-item" aria-label="Football action"></div><div class="gallery-item" aria-label="Football stadium"></div><div class="gallery-item" aria-label="Football players"></div></div>
+  </div>
+</section>
+
+<section id="sponsors" style="background:#0c120e">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Powering the game</div><h2>OUR SPONSORS</h2><p>Partner with us to connect your brand with players, students and passionate football fans.</p></div>
+    <div class="grid grid-4"><div class="card sponsor">YOUR LOGO</div><div class="card sponsor">BRAND PARTNER</div><div class="card sponsor">SPORTS PARTNER</div><div class="card sponsor">COMMUNITY PARTNER</div></div>
+    <p class="notice">Placeholder sponsor spaces. Replace with confirmed partner logos only.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div><div class="eyebrow">Get in touch</div><h2 style="font-size:2rem;margin:8px 0">READY TO KICK OFF?</h2><p class="muted">For registrations, sponsorships and event enquiries, contact the organising team.</p><p style="margin-top:12px">Email: <strong>your-email@example.com</strong><br>Phone: <strong>+91 XXXXX XXXXX</strong><br>Venue: <strong>To be announced</strong></p></div>
+      <a class="btn btn-primary" href="mailto:your-email@example.com">Contact Organisers</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer-row"><div><strong>ULTIMATE <span style="color:var(--green)">CUP</span> 2026</strong><br>One Game. One Dream. One Champion.</div><div>© 2026 Ultimate Football Cup. All rights reserved.<br><span>Demo event website — update placeholders before publishing.</span></div></div></footer>
+
+<script>
+// Update this date/time to your confirmed event date. Format: YYYY-MM-DDTHH:MM:SS
+const eventDate = new Date("2026-12-15T09:00:00");
+function updateCountdown(){
+  const now = new Date();
+  let diff = eventDate - now;
+  if (Number.isNaN(diff)) diff = 0;
+  if (diff < 0) diff = 0;
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+document.getElementById("registrationForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!this.reportValidity()) return;
+  const team = document.getElementById("team").value.trim();
+  document.getElementById("formMessage").textContent =
+    `Thank you, ${team}! Your demo registration form is complete. No information has been sent or saved. Please contact the organisers to confirm participation.`;
+  this.reset();
+});
+</script>
+</body>
+</html>
